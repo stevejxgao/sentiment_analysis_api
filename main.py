@@ -23,5 +23,4 @@ def predict_sentiment(review: str):
     tf_outputs = model(tf_batch)
     labels = ['Negative','Positive']
     label = np.argmax(tf_outputs[0], axis=1)[0]
-    
     return labels[label]
